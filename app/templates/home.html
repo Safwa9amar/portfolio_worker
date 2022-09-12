@@ -1,0 +1,21 @@
+{% extends "layout.html" %} {%block content%}
+<div class="flex justify-center items-center pt-10 w-full ">
+  <a class="btn btn-outline-secondary" href="/add">Add some data</a>
+</div>
+<div class="flex justify-center items-baseline p-4 gap-2 rounded-lg">
+  <!-- Content here -->
+  {% for el in data%}
+  <div class="card" style="width: 18rem">
+    <img src={{el.img}} class="card-img-top h-full" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{el.header}}</h5>
+      <p class="card-text">
+        {{el.text}}
+      </p>
+      <a href="#" class="btn btn-primary">{{el.tag}}</a>
+    </div>
+  </div>
+  {%endfor%}
+</div>
+
+{%endblock content%}
