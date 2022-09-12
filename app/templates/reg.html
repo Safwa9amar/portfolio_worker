@@ -1,0 +1,109 @@
+{% extends "layout.html" %} {%block content%}
+<div class="flex justify-center items-center">
+  <form
+    method="POST"
+    action=""
+    class="flex justify-center items-stratch p-6 gap-4 text-[#000] rounded-md"
+  >
+    <div class="pl-4">
+      <div class="mb-2">
+        {{form.header.label(class='form-label')}} {%if form.header.errors%}
+        {{form.header(class='form-control form-control-lg is-invalid')}}
+        <div class="invalid-feedback">
+          {% for err in form.header.errors %}
+          <span>{{err}}</span>
+          {%endfor%}
+        </div>
+        {%else%} {{form.header(class='form-control form-control-lg')}} {%endif%}
+      </div>
+      <div class="mb-2">
+        {{form.tag.label(class='form-label')}} {%if form.tag.errors%}
+        {{form.tag(class='form-control form-control-lg is-invalid')}}
+        <div class="invalid-feedback">
+          {%for err in form.tag.errors%}
+          <span>{{err}}</span>
+          {%endfor%}
+        </div>
+        {%else%} {{form.tag(class='form-control form-control-lg')}} {%endif%}
+      </div>
+
+      <div class="mb-2">
+        {{form.img.label(class='form-label')}} {%if form.img.errors%}
+        {{form.img(class='form-control form-control-lg is-invalid')}}
+        <div class="invalid-feedback">
+          {%for err in form.img.errors%}
+          <span>{{err}}</span>
+          {%endfor%}
+        </div>
+        {%else%} {{form.img(class='form-control form-control-lg')}} {%endif%}
+      </div>
+
+      <div class="mb-2">
+        {{form.date.label(class='form-label')}} {%if form.date.errors%}
+        {{form.date(class='form-control form-control-lg is-invalid')}}
+        <div class="invalid-feedback">
+          {%for err in form.date.errors%}
+          <span>{{err}}</span>
+          {%endfor%}
+        </div>
+        {%else%} {{form.date(class='form-control form-control-lg')}} {%endif%}
+      </div>
+    </div>
+    <br />
+    <div class="pl-4 border-l-2 flex-col items-stratch justify-between">
+      <div class="mb-2">
+        {{form.en_notion_id.label(class='form-label')}} {%if
+        form.en_notion_id.errors%} {{form.en_notion_id(class='form-control
+        form-control-lg is-invalid')}}
+        <div class="invalid-feedback">
+          {%for err in form.en_notion_id.errors%}
+          <span>{{err}}</span>
+          {%endfor%}
+        </div>
+        {%else%} {{form.en_notion_id(class='form-control form-control-lg')}}
+        {%endif%}
+      </div>
+      <div class="mb-2">
+        {{form.ar_notion_id.label(class='form-label')}} {%if
+        form.ar_notion_id.errors%} {{form.ar_notion_id(class='form-control
+        form-control-lg is-invalid')}}
+        <div class="invalid-feedback">
+          {%for err in form.ar_notion_id.errors%}
+          <span>{{err}}</span>
+          {%endfor%}
+        </div>
+        {%else%} {{form.ar_notion_id(class='form-control form-control-lg')}}
+        {%endif%}
+      </div>
+      <div class="mb-2">
+        {{form.ar_darija_notion_id.label(class='form-label')}} {%if
+        form.ar_darija_notion_id.errors%}
+        {{form.ar_darija_notion_id(class='form-control form-control-lg
+        is-invalid')}}
+        <div class="invalid-feedback">
+          {%for err in form.ar_darija_notion_id.errors%}
+          <span>{{err}}</span>
+          {%endfor%}
+        </div>
+        {%else%} {{form.ar_darija_notion_id(class='form-control
+        form-control-lg')}} {%endif%}
+      </div>
+      <div class="mb-2">
+        {{form.Resume.label(class='form-label')}} {%if form.Resume.errors%}
+        {{form.Resume(class='form-control form-control-lg is-invalid')}}
+        <div class="invalid-feedback">
+          {%for err in form.Resume.errors%}
+          <span>{{err}}</span>
+          {%endfor%}
+        </div>
+        {%else%} {{form.Resume(class='form-control form-control-lg')}} {%endif%}
+      </div>
+      <div class="form-group">
+        {{form.submit(class='btn btn-outline-success')}}
+      </div>
+    </div>
+
+  </form>
+</div>
+
+{%endblock content%}
