@@ -1,5 +1,0 @@
-flask
-flask-sqlalchemy
-WTForms
-marshmallow-sqlalchemy
-flask-marshmallow
